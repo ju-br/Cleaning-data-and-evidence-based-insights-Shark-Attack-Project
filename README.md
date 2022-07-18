@@ -1,6 +1,6 @@
- #Shark attacks project {style=text-align:center}
+ # Shark attacks project {style=text-align:center}
 
- ##Exploring the general information
+ ## Exploring the general information
 
  There are 24 columns and 25723 rows.
 ###Missing values
@@ -63,5 +63,5 @@ Ploting attacks per season, overall, it is possible to accept hypothesis 1 as su
 ###Testing H2a and 2b:
  In both hemispheres, summer was the season with more attacks, further confirming hypothesis 2a. By turn, winter is the season with less attacks, confirming hypothesis 2b.
 
-![Ättacks per season per hemisphere"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/Hypotheses/Attacks_per_hemisphere_season.png) 
+![Ättacks per season per hemisphere"](figures/Hypotheses/Attacks_per_hemisphere_season.png) 
 
