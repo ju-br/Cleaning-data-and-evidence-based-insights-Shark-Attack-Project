@@ -3,7 +3,7 @@
  ## Exploring the general information
 
  There are 24 columns and 25723 rows.
-###Missing values
+### Missing values
 Inspecting the amount of missing values, it is possible to note that their are massive. The column with less missing values is Case number (17021) and the column with more missing values are Unnamend: 22 and 23 (25722,25721). Those two columns missing values almost match the total sample and therefore they were retrieved from further analysis. Checking the  percentage of missing values, the average missing value is 77.19 (min= 66.17 (case attacks) and max=88.54)), suggesting that the majority of rows are empty. In that case, due to the type of data colection, missing data can be ignorable (likely to be completely at random) and the best treatment at this step is data deletion as features with more than 50% of missing data should not be analyzed. Deleting rows missing values having age as reference returns most roles with less than 10 % of missing values (with the exception of Time and Species), value that is recommended for further analysis. The updated dataset has 3471 cases and 22 columns.
 
 ### Standardizing columns
@@ -13,7 +13,7 @@ The updated dataset has 12 columns. Next, column names are standardized to be lo
 ## Exploring types and values of the variables
 First thing was checking for duplicate values. There are none. Then, explring the variables types. All are objects with the exception of year. I also checked the first case. Next, cleaning and transforming the variables.
 
-###Cleaning and initial plots per variable
+### Cleaning and initial plots per variable
 
 #### Date
 Exploring the data count and unique values it is possible to conclude that the data in this variable is not standardized and that there are not many entries per date registered. So, using regex I extracted month from the date and created a new variable 'month'. Therefore, this variable has more meaning and it will be further used in analysis. Here is the plot of the number or attacks per month. 
@@ -52,13 +52,13 @@ During the exploratory analysis it was possible to hypothesize that summer is th
 The next step was to define a function assign corresponding countries to the North and South hemispheres. Next, using lambda, create a new variable hemisphere.
 After that, I defined a function that assign the corresponding season consdering the emisphere and months. A new variable was created to store that information. Ploting the attacks per hemisphere it is possible to see that the North hemisphere has more attacks registered than the South one.
 
-![Ättacks per hemisphere"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/Hypotheses/Attacks_per_hemisphere.png) 
+![Ättacks per hemisphere"](figures/Hypotheses/Attacks_per_hemisphere.png) 
 
 ###Testing H1: 
 Overal, summer is the season woth more attacks reported.
 Ploting attacks per season, overall, it is possible to accept hypothesis 1 as summer is the one with most attack occurences.
 
-![Ättacks per season"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/Hypotheses/Attacks_per_season.png) 
+![Ättacks per season"](figures/Hypotheses/Attacks_per_season.png) 
 
 ###Testing H2a and 2b:
  In both hemispheres, summer was the season with more attacks, further confirming hypothesis 2a. By turn, winter is the season with less attacks, confirming hypothesis 2b.
