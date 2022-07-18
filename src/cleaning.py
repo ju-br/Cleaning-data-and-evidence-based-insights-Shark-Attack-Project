@@ -55,10 +55,8 @@ def pop_column(df):
 #Standardizing columns names
 ##Creating a dictionary and standardazing columns names
 def stand_colum_name(df):  
-    dict_attacks_rename = {column : column.lower().strip() for column in df}
-    df = df.rename(dict_attacks_rename, axis = 1)
-    df.columns
-
+    dict_attacks_rename = {column : column.lower().strip() for column in df.columns}
+    df = df.rename(dict_attacks_rename, axis = 1, inplace=True)
 
 ###extract month from date - regex
 def regex_date_month(df):

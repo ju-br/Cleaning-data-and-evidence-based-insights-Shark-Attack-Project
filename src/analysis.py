@@ -60,30 +60,30 @@ def new_column_hemisphere (df):
     df['season_hemisphere']=df.apply(lambda x: season_hemisphere(x['month'],x['hemisphere']),1)
 
 ##Which hemisphere has more attacks?
-def hemisphere_count():
+def hemisphere_count(df):
     fig, ax = plt.subplots(figsize=(12, 8))
-    sns.countplot(ax=ax,x=attacks.loc[attacks['hemisphere']!=''].hemisphere)
-    fig.savefig('/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/Attacks_per_hemisphere.png')
+    sns.countplot(ax=ax,x=df.loc[df['hemisphere']!=''].hemisphere)
+    fig.savefig('figures/Attacks_per_hemisphere.png')
 
 
 ##creating x and y for plotly
 ##Do most attsacks happen during summer?
-def plot_attacks_season():
+def plot_attacks_season(df):
     y_axis=['summer','winter','spring','autumn']
-    x_axis=[len(attacks.loc[attacks['season_hemisphere']=='summer']),
-        len(attacks.loc[attacks['season_hemisphere']=='winter']),
-        len(attacks.loc[attacks['season_hemisphere']=='spring']),
-        len(attacks.loc[attacks['season_hemisphere']=='autumn'])]
+    x_axis=[len(df.loc[df['season_hemisphere']=='summer']),
+        len(df.loc[df['season_hemisphere']=='winter']),
+        len(df.loc[df['season_hemisphere']=='spring']),
+        len(df.loc[df['season_hemisphere']=='autumn'])]
     fig=go.Figure(go.Bar(x=x_axis,y=y_axis,orientation='h'))
     fig.show()
 
-def season_hemis_count():
+def season_hemis_count(df):
     fig, ax = plt.subplots(figsize=(12, 8))
-    sns.countplot(ax=ax,data=attacks.loc[attacks['hemisphere']!=''], x="hemisphere", hue="season_hemisphere")
+    sns.countplot(ax=ax,data=df.loc[df['hemisphere']!=''], x="hemisphere", hue="season_hemisphere")
     fig.savefig('figures/Attacks_per_hemisphere_season.png')
 
 
 
 ##save dataset updated
 def export_csv (df):
-    df.to_csv('output/attacks_updated.csv',index=False)
+    df.to_csv('output/updated.csv',index=False)
