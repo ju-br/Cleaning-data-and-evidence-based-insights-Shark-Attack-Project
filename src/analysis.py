@@ -80,7 +80,7 @@ def plot_attacks_season(df):
 def season_hemis_count(df):
     fig, ax = plt.subplots(figsize=(12, 8))
     sns.countplot(ax=ax,data=df.loc[df['hemisphere']!=''], x="hemisphere", hue="season_hemisphere")
-    fig.savefig('figures/Attacks_per_hemisphere_season.png')
+    fig.savefig('figures/Attacks_per_hemisphere_season.png', dpi=500)
 
 
 
