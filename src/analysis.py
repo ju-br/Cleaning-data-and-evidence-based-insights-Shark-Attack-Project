@@ -63,23 +63,21 @@ def hemisphere_count():
 
 
 ##creating x and y for plotly
-def plot_season():
+##Do most attsacks happen during summer?
+def plot_attacks_season():
     y_axis=['summer','winter','spring','autumn']
     x_axis=[len(attacks.loc[attacks['season_hemisphere']=='summer']),
         len(attacks.loc[attacks['season_hemisphere']=='winter']),
         len(attacks.loc[attacks['season_hemisphere']=='spring']),
         len(attacks.loc[attacks['season_hemisphere']=='autumn'])]
-
-##Do most attsacks happen during summer?
-def plot_attacks_season():
     fig=go.Figure(go.Bar(x=x_axis,y=y_axis,orientation='h'))
     fig.show()
 
-##Do most attacks happen during summer and winter comparing hemispheres?
-def plot_hemisphere_season():
+def season_hemis_count():
     fig, ax = plt.subplots(figsize=(12, 8))
     sns.countplot(ax=ax,data=attacks.loc[attacks['hemisphere']!=''], x="hemisphere", hue="season_hemisphere")
-    fig.savefig('/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/Attacks_per_hemisphere_season.png')
+    fig.savefig('figures/Attacks_per_hemisphere_season.png')
+
 
 
 ##save dataset updated
