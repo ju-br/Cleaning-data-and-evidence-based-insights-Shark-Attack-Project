@@ -19,23 +19,23 @@ First thing was checking for duplicate values. There are none. Then, explring th
 Exploring the data count and unique values it is possible to conclude that the data in this variable is not standardized and that there are not many entries per date registered. So, using regex I extracted month from the date and created a new variable 'month'. Therefore, this variable has more meaning and it will be further used in analysis. Here is the plot of the number or attacks per month. 
 
 
-![Ättacks per month"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/month.png) 
+![Ättacks per month"](figures/EDA/month.png) 
 Analyzing the month graph it is possible to see that most attacks happen in July, August and September, suggesting that summer is the season with more attacks. However, as the dataset have countries from both hemispheres, this hypothesis has to be further investigated acccounting per hemisphere.
 
 #### Year
 The first step was to transform the type of the variable yeaer from float to integer.After that, ploting the distribution it is possible to see that cases started to be recorded more systematically from 1850 on.
 
-![Ättacks per year"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/Year_all.png) 
+![Ättacks per year"](figures/EDA/Year_all.png) 
 
 Therefore, I considered year from 1850, on; with a distribution plotted with 20 bins looking like the following.
-![Ättacks per year/ 1850"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/Year_1850.png) 
+![Ättacks per year/ 1850"](figures/EDA/Year_1850.png) 
 
-![Ättacks per year/ 1850"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/Year.png) 
+![Ättacks per year/ 1850"](figures/EDA/Year.png) 
 
 
 #### Sex
 After cleaning invalid entries and striping spaces, the sample has 2806 men and 436 women.
-!["Attacks per gender"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/Gender.png) 
+!["Attacks per gender"](figures/EDA/Gender.png) 
 I also created a dummy vatiable 'sex_count'having 'male'as 0 and 'female'as 1.
 
 
