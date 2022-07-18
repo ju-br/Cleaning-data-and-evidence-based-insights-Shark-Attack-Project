@@ -54,51 +54,51 @@ def pop_column(df):
 
 #Standardizing columns names
 ##Creating a dictionary and standardazing columns names
-def stand_colum_name():  
-    dict_attacks_rename = {column : column.lower().strip() for column in attacks}
-    attacks = attacks.rename(dict_attacks_rename, axis = 1)
-    attacks.columns
+def stand_colum_name(df):  
+    dict_attacks_rename = {column : column.lower().strip() for column in df}
+    df = df.rename(dict_attacks_rename, axis = 1)
+    df.columns
 
 
 ###extract month from date - regex
-def regex_date_month():
-    attacks['date'] = attacks['date'].str.extract('(-\D{3}-)', expand=True)
+def regex_date_month(df):
+    df['date'] = df['date'].str.extract('(-\D{3}-)', expand=True)
 
 ###remove - as separator
-def regex_separator_month():
+def regex_separator_month(df,column):
     regex_list = [r"(-\D{3}-): ", r"-"]
-    attacks['date'] = attacks['date'].replace(regex=regex_list, value="")
+    df[column] = df[column].replace(regex=regex_list, value="")
 
 
 
 ###plot months distribution
-def plot_month():
+def plot_month(df):
     fig, ax = plt.subplots(figsize=(12, 8))
-    attacks.dropna(subset=['month'], inplace = True)
-    sns.histplot(ax=ax,data=attacks, x="month")
-    fig.savefig('/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/month.png')
+    df.dropna(subset= ['month'], inplace = True)
+    sns.histplot(ax=ax,data=df, x="month")
+    fig.savefig('figures/EDA/month.png')
 
 ##Year
 
 ###plotting year distribution
-def plot_year():
+def plot_year(df, column):
     fig, ax = plt.subplots(figsize=(15, 8))
-    sns.histplot(x=attacks.year, bins=30)
-    fig.savefig('/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/Year_all.png')
+    sns.histplot(x=df[column], bins=30)
+    fig.savefig(f'figures/EDA/{column}.png')
 
 ###Removing the data where 'Year'
-def plot_year_1850():
-    attacks = attacks.loc[attacks['year'] > 1850,:]
+def plot_year_1850(df, column):
+    df = df.loc[df['year'] > 1850,:]
     fig, ax = plt.subplots(figsize=(15, 8))
-    sns.histplot(ax=ax,x=attacks.year, bins=20,color='blue')
-    fig.savefig('/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/Year_1850.png')
+    sns.histplot(ax=ax,x=df[column], bins=20,color='blue')
+    fig.savefig(f'figures/EDA/{column}.png')
 
 ###plotting in another way - year
-def plot_year_colored():
-    attacks = attacks.loc[attacks['year'] > 1850,:]
+def plot_year_colored(df):
+    df = df.loc[df['year'] > 1850,:]
     fig, ax = plt.subplots(figsize=(80, 9))
-    sns.countplot(ax=ax,x=attacks.year, )
-    fig.savefig('/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/Year.png')
+    sns.countplot(ax=ax,x=df.year, )
+    fig.savefig('figures/EDA/Year.png')
 
 ##Sex
 
@@ -112,7 +112,7 @@ def clean_sex():
 def plot_sex():
     fig, ax = plt.subplots(figsize=(15, 8))
     sns.countplot(ax=ax,x=attacks.sex)
-    fig.savefig('/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/Gender.png')
+    fig.savefig('figures/EDA/Gender.png')
 
 ###creating a dummy variable
 def transf_sex_count():
