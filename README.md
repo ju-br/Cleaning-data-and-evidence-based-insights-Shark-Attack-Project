@@ -39,22 +39,22 @@ After cleaning invalid entries and striping spaces, the sample has 2806 men and 
 
 ## Hypothesis testing
 During the exploratory analysis it was possible to hypothesize that summer is the season with more shark attacks. However, as there are countries from all over the world and seasons are not corresponding in the hemispheres, I have three hypotheses:
-###H1: Overal, summer is the season woth more attacks reported.
-###H2a: In both hemispheres, summer will be the season with more attacks
-###H2b: In both hemispheres, winter will be the season with less attacks
+### H1: Overal, summer is the season woth more attacks reported.
+### H2a: In both hemispheres, summer will be the season with more attacks
+### H2b: In both hemispheres, winter will be the season with less attacks
 
 The next step was to define a function assign corresponding countries to the North and South hemispheres. Next, using lambda, create a new variable hemisphere.
 After that, I defined a function that assign the corresponding season consdering the emisphere and months. A new variable was created to store that information. Ploting the attacks per hemisphere it is possible to see that the North hemisphere has more attacks registered than the South one.
 
 ![Attacks per Hemisphere](https://github.com/ju-br/Ironhack-Project/blob/main/figures/Hypotheses/Attacks_per_hemisphere.png)
 
-###Testing H1: 
+### Testing H1: 
 Overal, summer is the season woth more attacks reported.
 Ploting attacks per season, overall, it is possible to accept hypothesis 1 as summer is the one with most attack occurences.
 
 ![Attacks per season](https://github.com/ju-br/Ironhack-Project/blob/main/figures/Hypotheses/Attacks_per_season.png)
 
-###Testing H2a and 2b:
+### Testing H2a and 2b:
  In both hemispheres, summer was the season with more attacks, further confirming hypothesis 2a. By turn, winter is the season with less attacks, confirming hypothesis 2b.
 
 ![Attacks per Hemisphere per season](https://github.com/ju-br/Ironhack-Project/blob/main/figures/Hypotheses/Attacks_per_hemisphere_season.png)
