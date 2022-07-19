@@ -18,12 +18,11 @@ First thing was checking for duplicate values. There are none. Then, explring th
 #### Date
 Exploring the data count and unique values it is possible to conclude that the data in this variable is not standardized and that there are not many entries per date registered. So, using regex I extracted month from the date and created a new variable 'month'. Therefore, this variable has more meaning and it will be further used in analysis. Here is the plot of the number or attacks per month. 
 
-
-<<<<<<< HEAD
 !["Attacks per month"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/month.png)
 =======
-![Ättacks per month"](figures/EDA/month.png){height=500}
->>>>>>> 73491b61c38cd85337a3d464170e9f9a494b9419
+!["Attacks per month"](figures/EDA/month.png){height=500}
+
+
 Analyzing the month graph it is possible to see that most attacks happen in July, August and September, suggesting that summer is the season with more attacks. However, as the dataset have countries from both hemispheres, this hypothesis has to be further investigated acccounting per hemisphere.
 
 #### Year
@@ -31,16 +30,6 @@ The first step was to transform the type of the variable yeaer from float to int
 !["Attacks per year/ 1850"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/year_1850.png).
 And in a different format, you will have:
 !["Attacks per year/ 1850"](/Users/Juliana/Desktop/Ironhack/Projects/Ironhack-Project/figures/EDA/Year_all.png)
-
-<<<<<<< HEAD
-=======
-!['Attacks per year'](figures/EDA/Year_all.png) 
-
-Therefore, I considered year from 1850, on; with a distribution plotted with 20 bins looking like the following.
-![Ättacks per year/ 1850"](figures/EDA/Year_1850.png) 
-
-![Ättacks per year/ 1850"](figures/EDA/Year.png) 
->>>>>>> 73491b61c38cd85337a3d464170e9f9a494b9419
 
 
 #### Sex
