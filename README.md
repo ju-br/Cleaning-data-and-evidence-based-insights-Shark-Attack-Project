@@ -1,4 +1,8 @@
  # Shark attacks project 
+ 
+ <p align="center">
+<img src="https://media4.giphy.com/media/PfHrNe1cSKAjC/giphy.gif?cid=ecf05e47ovrt5l7r54lsqe8mnkom66uqynaj7x8qraw166tl&rid=giphy.gif&ct=g" width="400" height="200" />
+</p>
 
  ## Exploring the general information
 
